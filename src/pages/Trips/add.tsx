@@ -1,7 +1,7 @@
-import { useLoaderData, useNavigate } from "react-router-dom"
-import { IBusHouse } from "../../interfaces/trips";
-import { useForm, SubmitHandler } from "react-hook-form"
+import { SubmitHandler, useForm } from "react-hook-form";
+import { useLoaderData, useNavigate } from "react-router-dom";
 import { postTrip } from "../../api/trips.api";
+import { IBusHouse } from "../../interfaces/trips";
 
 type AddTripForm = {
     busHouseId: string
@@ -19,7 +19,7 @@ const AddTrip = () => {
     const {
         register,
         handleSubmit,
-        watch,
+     
         formState: { errors },
     } = useForm<AddTripForm>()
     const onSubmit: SubmitHandler<AddTripForm> = async (data) => {

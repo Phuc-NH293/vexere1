@@ -1,18 +1,18 @@
-import { BrowserRouter, createBrowserRouter } from "react-router-dom";
-import HomePage from "./pages/home";
+import { createBrowserRouter } from "react-router-dom";
 import AboutPage from "./pages/about";
 import Detail from "./pages/detail";
+import HomePage from "./pages/home";
 
-import AdminLayout from './components/layout/AdminLayout'
+import { getBusHouses } from './api/busHouse.api';
+import { getTripById } from './api/trips.api';
+import AdminLayout from './components/layout/AdminLayout';
 import Dashboard from './pages/Dashboard';
 import TripList from './pages/Trips';
 import AddTrip from './pages/Trips/add';
-import NotFound from './pages/notFound';
-import { getBusHouses } from './api/busHouse.api';
-import { getTripById } from './api/trips.api';
 import UpdateTrip from './pages/Trips/update';
+import NotFound from './pages/notFound';
 
-import UserLogin from './components/login'
+import UserLogin from './components/login';
 const router = createBrowserRouter([
     {
         path: "/",

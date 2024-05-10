@@ -1,9 +1,8 @@
 import axios from 'axios'
 import { useEffect, useState } from 'react'
-import { ITrip } from '../../interfaces/trips'
 import { Link } from 'react-router-dom'
 import { deleteTrip } from '../../api/trips.api'
-import { useNavigate} from "react-router-dom"
+import { ITrip } from '../../interfaces/trips'
 
 const TripList = () => {
     const [trips, setTrips] = useState<ITrip[]>([])
@@ -27,7 +26,6 @@ const TripList = () => {
 }
 
 const Trip = (props: { data: ITrip }) => {
-    const navigate = useNavigate()
     // xoa
     const handleDelete = async (id?: number | string) =>{
         try {

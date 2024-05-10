@@ -1,8 +1,7 @@
-import { useLoaderData, useNavigate, useParams } from "react-router-dom"
-import { IBusHouse, ITrip } from "../../interfaces/trips";
-import { useForm, SubmitHandler } from "react-hook-form"
-import { Link } from 'react-router-dom'
+import { SubmitHandler, useForm } from "react-hook-form";
+import { Link, useLoaderData, useNavigate, useParams } from "react-router-dom";
 import { putTrip } from "../../api/trips.api";
+import { IBusHouse, ITrip } from "../../interfaces/trips";
 
 type AddTripForm = {
     busHouseId: string
@@ -21,7 +20,7 @@ const UpdateTrip = () => {
     const {
         register,
         handleSubmit,
-        watch,
+       
         formState: { errors },
     } = useForm<AddTripForm>({
         defaultValues: trip

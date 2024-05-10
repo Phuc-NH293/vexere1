@@ -1,13 +1,10 @@
 // import Banner from "../components/Banner"
 // import Card from "../components/Card"
-import Header from "../components/Header"
 import Footer from "../components/Footer"
+import Header from "../components/Header"
+import Mainn from "../components/Mainn"
 import PageLink from "../components/PageLink"
 import SeachBaseDetail from "../components/SeachBaseDetail"
-import Mainn from "../components/Mainn"
-import { useState } from "react";
-import { ITrip } from "../interfaces/trips";
-import { getTrips } from "../api/trips.api";
 
 const Detail = () => {
     // const [ trips , setTrips]= useState<ITrip[]>([]);
